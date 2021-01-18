@@ -1,0 +1,98 @@
+.entertainment {
+  background: url("/Front-end/src/images/entertainment.jpg") no-repeat
+    center/cover;
+  padding: 8rem 4rem;
+  position: relative;
+  margin: 4rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .element-progressbar-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .title-entertainment {
+      font-size: 1.6rem;
+      letter-spacing: 0.12rem;
+      color: $main-white;
+    }
+
+    .paragraph-entertainment-container {
+      max-width: 500px;
+    }
+    p {
+      color: $paragraph-clr;
+      font-weight: 400;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// media queries
+@media screen and (max-width: $phone) {
+  .entertainment {
+    padding: 5rem 1rem;
+
+    .title-entertainment {
+      margin-bottom: 2rem;
+    }
+
+    .paragraph-entertainment-container {
+      margin-top: 2rem;
+    }
+
+    .fullstacks {
+      position: relative;
+      margin: auto;
+    }
+  }
+}
+
+// Ipad & Ipad Pro
+@media screen and (min-width: $phone) and (max-width: $tablet) {
+  .entertainment {
+    .element-progressbar-container {
+      flex-wrap: nowrap;
+
+      .title-entertainment {
+        font-size: 1.4rem;
+        margin-right: 2rem;
+      }
+
+      .paragraph-entertainment-container {
+        width: 100%;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $laptop) {
+  .entertainment {
+    .element-progressbar-container {
+      flex-wrap: nowrap;
+
+      .title-entertainment {
+        margin-right: 1rem;
+      }
+    }
+    .paragraph-entertainment-container {
+      width: 50%;
+      margin-left: 2rem;
+    }
+  }
+}

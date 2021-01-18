@@ -1,0 +1,104 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+}
+
+.home {
+  background: url("/Front-end/src/images/background-1.jpg") no-repeat
+    center/cover;
+}
+
+// title style
+.title-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin-top: 50vh;
+  align-content: center;
+  position: relative;
+  z-index: 2;
+
+  div {
+    color: $main-white;
+  }
+
+  h5 {
+    font-size: 1.875rem;
+    font-weight: 400;
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+  }
+
+  .small-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    position: absolute;
+  }
+
+  .main-subtitle-container {
+    display: grid;
+    max-width: 450px;
+
+    & p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      font-size: 1.25rem;
+      font-weight: 300;
+
+      .red {
+        color: #ff1616;
+      }
+
+      .green {
+        color: #8ebf03;
+      }
+    }
+  }
+}
+
+// media queries
+@media screen and (min-width: $phone) and (max-width: $tablet) {
+  .title-grid {
+    padding: 0 2rem;
+
+    .main-title {
+      font-size: 2.8rem;
+    }
+
+    .small-subtitle,
+    h5 {
+      font-size: 1.4rem;
+    }
+
+    .main-subtitle-container {
+      margin-left: 5rem;
+
+      & p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) and (max-width: $desktop) {
+  .main-subtitle-container {
+    margin-left: 3rem;
+  }
+}

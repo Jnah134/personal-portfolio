@@ -1,0 +1,230 @@
+.work {
+  background: url("/Front-end/src/images/background-2.jpg") no-repeat
+    center/cover;
+}
+
+.box-title {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.box-paragraph {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+// button
+.link-container {
+  margin-top: 4rem;
+
+  .btn {
+    text-transform: uppercase;
+    color: $primary-clr;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 1.5rem 1rem 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn--primary {
+    color: $primary-clr;
+  }
+
+  .btn--border {
+    border-radius: 3.125rem;
+  }
+
+  .btn--animated {
+    transition-property: color;
+    transition-duration: 0.5s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $primary-clr;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $main-white;
+      padding-left: 1.5rem;
+
+      &:before {
+        transform: scaleX(1);
+        transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+      }
+    }
+  }
+
+  // font-awesome
+  .fa-arrow-right {
+    margin-left: 1rem;
+  }
+}
+
+// second section
+.second-section-page {
+  padding: 3.5rem 5rem;
+  color: $main-white;
+
+  .line-up {
+    width: 100%;
+    height: 0.2rem;
+    background: $main-white;
+  }
+
+  .line-title {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .portfolio-boxes-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .box-portfolio-container {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    height: 480px;
+    border-radius: 0.8rem;
+    background: $box-clr;
+    transition: transform 0.6s;
+    overflow: hidden;
+
+    &:hover {
+      background: #1d1436;
+      transform: translateY(-5px);
+    }
+  }
+
+  .company-task {
+    padding: 2rem 1.5rem 0;
+
+    h5 {
+      color: $paragraph-clr;
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-family: "Quantico", sans-serif;
+      color: $main-white;
+      margin: 0.75rem 0;
+    }
+
+    p {
+      color: $paragraph-clr;
+      line-height: 1.7;
+    }
+
+    .head {
+      transform: translateY(10px);
+      position: absolute;
+      opacity: 0;
+      @include transition;
+    }
+
+    .btn-container-card {
+      margin-top: 2.5rem;
+
+      & .link-btn-card {
+        background: $primary-clr;
+        padding: 0.7rem 1.5rem;
+        border-radius: 3.125rem;
+        text-decoration: none;
+        color: $main-white;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+      }
+    }
+  }
+
+  // image
+  .mockup {
+    border-radius: 0.8rem 0.8rem 0 0;
+    max-width: 350px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.box-portfolio-container:hover .head {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// media queries
+@media screen and (max-width: $phone) {
+  .second-section-page {
+    padding: 2rem 1rem;
+
+    .portfolio-boxes-container {
+      justify-content: center;
+      margin-top: 3rem;
+
+      & .head {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .box-portfolio-container {
+        margin: 1rem 0rem;
+      }
+    }
+  }
+}
+
+// Ipad
+@media screen and (max-width: $tablet) {
+  .second-section-page {
+    padding: 3.5rem 1rem;
+
+    .portfolio-boxes-container {
+      flex-wrap: wrap;
+
+      .box-portfolio-container:nth-child(2) {
+        margin-left: 0.3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) and (max-width: $desktop) {
+  .second-section-page {
+    padding: 3.5rem 3rem;
+
+    .portfolio-boxes-container {
+      flex-wrap: nowrap;
+
+      .box-portfolio-container:nth-child(2) {
+        margin: 0 1rem;
+      }
+    }
+  }
+}

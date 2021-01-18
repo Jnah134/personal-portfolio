@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>JRTech</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <header id="home">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="./images/logo-edited.png" class="logo" alt="" />
+          </a>
+        </div>
+        <div class="menu-btn">
+          <span class="menu-btn__burger"></span>
+        </div>
+        <!-- navbar -->
+
+        <nav class="navbar">
+          <ul class="menu_nav">
+            <li class="menu_nav__item">
+              <a href="work.html" class="menu_nav__link">work</a>
+            </li>
+            <li class="menu_nav__item">
+              <a href="who.html" class="menu_nav__link">who</a>
+            </li>
+            <li class="menu_nav__item">
+              <a href="contact.html" class="menu_nav__link">contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- end of navbar -->
+        <div class="social-media">
+          <i class="fab fa-facebook-f social-media-icon"></i>
+          <i class="fab fa-twitter social-media-icon"></i>
+          <i class="fab fa-instagram social-media-icon"></i>
+          <i class="fab fa-linkedin-in social-media-icon"></i>
+        </div>
+      </header>
+    </div>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <ul class="sidebar__links">
+        <li class="sidebar__links_test">
+          <a href="work.html">Work</a>
+        </li>
+        <li class="sidebar__links_test">
+          <a href="who.html">Who</a>
+        </li>
+        <li class="sidebar__links_test">
+          <a href="contact.html">Contact</a>
+        </li>
+
+        <div class="social-media-sidebar">
+          <i class="fab fa-facebook-f social-media-icon"></i>
+          <i class="fab fa-twitter social-media-icon"></i>
+          <i class="fab fa-instagram social-media-icon"></i>
+          <i class="fab fa-linkedin-in social-media-icon"></i>
+        </div>
+      </ul>
+    </aside>
+    <!-- end of sidebar -->
+
+    <!-- hero section -->
+    <div class="hero-container contact">
+      <div class="title-grid">
+        <div>
+          <h5>Contact Me</h5>
+          <h1 class="main-title">
+            Let’s talk <br />About
+            <span class="small-subtitle">your project</span>
+          </h1>
+        </div>
+        <div class="main-subtitle-container">
+          <p>
+            <span class="red"> JRTech</span> help businesses grow through
+            innovation and technology.
+          </p>
+          <p>It all happens when our top-of-the-game talents get to play.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end of hero section -->
+
+    <!-- 1st section -->
+    <section class="second-section-page">
+      <div class="line-up"></div>
+      <h3 class="line-title">Tell me about your project</h3>
+
+      <!-- form section -->
+      <form id="form">
+        <div class="flex">
+          <div class="column-direction">
+            <div class="label-container">
+              <label for="name">Name <i class="fas fa-star"></i></label>
+            </div>
+            <input
+              type="text"
+              class="full-name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
+          <div class="column-direction">
+            <div class="label-container">
+              <label for="company">Company</label>
+            </div>
+            <input
+              type="text"
+              class="company-name"
+              placeholder="Company name"
+            />
+          </div>
+        </div>
+        <div class="form-container">
+          <label for="email">Email Address <i class="fas fa-star"></i></label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <label for="services">Services <i class="fas fa-star"></i></label>
+          <input
+            type="text"
+            name="services"
+            placeholder="A list of services required"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="objectives">Objectives <i class="fas fa-star"></i></label>
+          <input
+            type="text"
+            name="objectives"
+            placeholder="Project details - what do I need to acheive?"
+            required
+          />
+          <label for="budget">Budget <i class="fas fa-star"></i></label>
+          <input
+            type="text"
+            name="budget"
+            placeholder="Indicative budget"
+            required
+          />
+        </div>
+
+        <!-- privacy & policy -->
+        <div class="policy-container">
+          <div class="test">
+            <div class="btn-check">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
+          </div>
+          <div class="policy-text">
+            <p>
+              I have read and accepted the
+              <span class="primary">
+                Privacy Policy <i class="fas fa-star"></i
+              ></span>
+            </p>
+            <p class="small-text">
+              (Your information is not stored on my website. your information is
+              emailed directly to me)
+            </p>
+          </div>
+        </div>
+        <div class="link-container center-btn">
+          <a href="#" class="btn btn--border btn--primary btn--animated"
+            >Send <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <!-- end of privacy & policy -->
+      </form>
+      <!-- end of form section -->
+    </section>
+    <!-- end of 1st section -->
+    <!-- footer -->
+    <footer>
+      <div class="privacy-container">
+        <div class="privacy-terms">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+        <h3 class="email-contact">support@jrtech.ma</h3>
+      </div>
+      <div class="last-footer">
+        <p class="copyright">
+          &copy; <span id="date"></span> JRTech. All Rights Reserved.
+        </p>
+        <img src="./images/logo-edited.png" class="logo" alt="" />
+      </div>
+    </footer>
+    <!-- end of footer -->
+
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+    <!-- javascript -->
+    <script
+      src="https://kit.fontawesome.com/d72c7f205a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/Front-end/src/js/index.js"></script>
+    <script src="/Front-end/src/js/utils/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap");
+
+$primary-clr: #f95959;
+$primary-clr-2: #ff1616;
+$secondary-clr: #090514;
+$box-clr: #19112e;
+$main-black: #000;
+$main-white: #fff;
+$paragraph-clr: #efe9e9;
+$main-blue-clr: #169dff;
+$main-blue-clr-2: #318fd3;
+$max-width: 1300px;
+$spacing: 0.2rem;
+$radius: 1.25rem;
+$image-size: 100%;
+
+// Responsive devices
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 680px;
+
+// mixin
+@mixin transition {
+  transition: all 0.3s ease-in;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}

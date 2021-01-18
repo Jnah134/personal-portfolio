@@ -1,0 +1,171 @@
+.contact {
+  background: url("/Front-end/src/images/background-4.jpg") no-repeat
+    center/cover;
+}
+
+#form {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+  label,
+  .label-container {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 2rem 0;
+  }
+
+  input {
+    background: $box-clr;
+    border-color: transparent;
+    border-radius: 3.125rem;
+    font-size: 1.1rem;
+    padding: 1rem 1rem;
+    outline: none;
+
+    &:focus {
+      color: $main-white;
+      border-color: $main-blue-clr;
+      box-shadow: 0 0 6px $main-blue-clr-2;
+      @include transition;
+    }
+  }
+
+  .policy-container {
+    margin-top: 2rem;
+
+    .btn-check {
+      position: relative;
+
+      // checkboxe
+      & label {
+        background-color: $box-clr;
+        border: 1px solid $box-clr;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 31px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 31px;
+      }
+
+      & label:after {
+        border: 3px solid $primary-clr;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        left: 7px;
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+        transform: rotate(-45deg);
+        width: 12px;
+        @include transition;
+      }
+
+      & input[type="checkbox"] {
+        visibility: hidden;
+      }
+
+      & input[type="checkbox"]:checked + label {
+        box-shadow: 0 0 5px $primary-clr-2;
+        border-color: $primary-clr;
+      }
+
+      & input[type="checkbox"]:checked + label:after {
+        opacity: 1;
+      }
+      // end of checkboxe
+    }
+  }
+
+  .policy-text {
+    margin-left: 3rem;
+
+    .primary {
+      color: $primary-clr;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: $paragraph-clr;
+      font-weight: 300;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.column-direction {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 25rem;
+  width: 100%;
+}
+
+// font awesome
+.fa-star {
+  color: $primary-clr;
+  font-size: 0.45rem;
+  position: absolute;
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+// media queries
+@media screen and (max-width: $phone) {
+  #form {
+    label {
+      font-size: 1rem;
+    }
+
+    input {
+      font-size: 0.9rem;
+    }
+
+    .policy-container {
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .small-text {
+        font-size: 0.85rem;
+      }
+    }
+
+    .center-btn {
+      padding-left: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $phone) and (max-width: $tablet) {
+  .flex {
+    flex-wrap: nowrap;
+
+    .column-direction:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}

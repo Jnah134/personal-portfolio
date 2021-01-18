@@ -1,0 +1,152 @@
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3.5rem 5rem;
+  color: $main-white;
+
+  .information-container {
+    max-width: 40rem;
+
+    // upper line
+    .upper-line {
+      width: 100%;
+      height: 0.2rem;
+      background: $main-white;
+    }
+
+    .under-line-title {
+      font-weight: 400;
+      font-size: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .title-section {
+      font-family: "Quantico", sans-serif;
+      font-weight: 600;
+      margin: 2rem 0;
+      line-height: 1.5;
+      font-size: 2.2rem;
+    }
+
+    p {
+      color: $paragraph-clr;
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    .experience-client-container {
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      h3 {
+        display: flex;
+      }
+
+      .text {
+        margin-top: 1.8rem;
+        margin-left: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 400;
+      }
+
+      .number-clr {
+        color: $primary-clr;
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+// boxes style
+.first-box,
+.second-box {
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-box {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  p {
+    color: $paragraph-clr;
+    margin-top: 1rem;
+  }
+}
+
+.box-container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first-box {
+  padding: 1.5rem;
+  background: $primary-clr;
+  max-width: 25rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: $radius;
+  margin-bottom: 2rem;
+}
+
+.second-box {
+  padding: 1.5rem;
+  background: $box-clr;
+  max-width: 25rem;
+  width: 100%;
+  height: 15rem;
+  border-radius: $radius;
+}
+
+.flex-container {
+  width: 25rem;
+}
+
+// media queries
+@media screen and (max-width: $tablet) {
+  .first-section {
+    padding: 3.5rem 2rem;
+  }
+
+  .flex-container {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+
+    & .first-box {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) and (max-width: $desktop) {
+  .first-section {
+    padding: 3.5rem 3rem;
+
+    .information-container {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .flex-container {
+    flex-direction: column;
+
+    & .first-box {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}

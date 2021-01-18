@@ -1,0 +1,165 @@
+.about {
+  background: url("/Front-end/src/images/background-3.jpg") no-repeat
+    center/cover;
+}
+
+.personal-image {
+  border-radius: $radius;
+  max-width: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact-social-media {
+  margin-top: 2rem;
+  color: $primary-clr;
+  cursor: pointer;
+
+  i {
+    font-size: 1.6rem;
+
+    &:hover {
+      color: $main-blue-clr;
+      @include transition;
+    }
+
+    &:nth-child(2) {
+      margin: 0 1.2rem;
+    }
+  }
+}
+
+// section anchor
+.section-anchor-container {
+  position: relative;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  margin-left: 9rem;
+  z-index: 3;
+
+  .section-anchor {
+    color: $main-white;
+    cursor: pointer;
+    overflow: hidden;
+
+    .line {
+      position: relative;
+      width: 9.375rem;
+      height: 2px;
+      background: $main-white;
+      margin-bottom: 1rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        // top: 0px;
+        // left: 0px;
+        width: 9.375rem;
+        border-bottom: 3px solid $primary-clr;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .number,
+    h4 {
+      font-size: 0.85rem;
+      font-weight: normal;
+      margin: 0.6rem 0;
+    }
+  }
+}
+
+.section-anchor:hover .line::after {
+  transform: translateX(0);
+}
+
+// second section
+.illustration-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 6rem 4rem;
+
+  .illustration-section-text {
+    max-width: 500px;
+
+    h3 {
+      font-size: 2.7rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $paragraph-clr;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
+}
+
+.light-line {
+  width: 100%;
+  height: 1px;
+  background: $paragraph-clr;
+}
+
+.illustration-image {
+  max-width: 300px;
+  width: 100%;
+}
+
+// media queries
+@media screen and (max-width: $phone) {
+  .section-anchor-container {
+    display: none;
+  }
+
+  .personal-image {
+    margin-top: 3rem;
+  }
+
+  .illustration-container {
+    padding: 6rem 1rem;
+
+    .illustration-section-text {
+      h3 {
+        font-size: 2rem;
+        margin-top: 3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// media queries
+@media screen and (min-width: $phone) and (max-width: $laptop) {
+  .section-anchor-container {
+    margin-left: 4rem;
+  }
+
+  .personal-image {
+    margin-top: 3rem;
+  }
+
+  .illustration-container {
+    padding: 6rem 2rem 2rem;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .illustration-section-text {
+      margin-left: 2rem;
+      width: 100%;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
