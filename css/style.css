@@ -97,6 +97,7 @@
 
 .illustration-container .illustration-section-text {
   max-width: 500px;
+  width: 100%;
 }
 
 .illustration-container .illustration-section-text h3 {
@@ -118,7 +119,12 @@
   background: #efe9e9;
 }
 
-.illustration-image {
+.image-illust-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.image-illust-container .illustration-image {
   max-width: 300px;
   width: 100%;
 }

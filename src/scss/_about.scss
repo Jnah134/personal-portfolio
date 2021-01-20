@@ -84,6 +84,7 @@
 
   .illustration-section-text {
     max-width: 500px;
+    width: 100%;
 
     h3 {
       font-size: 2.7rem;
@@ -106,9 +107,14 @@
   background: $paragraph-clr;
 }
 
-.illustration-image {
-  max-width: 300px;
+.image-illust-container {
+  max-width: 500px;
   width: 100%;
+
+  .illustration-image {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 
 // media queries
