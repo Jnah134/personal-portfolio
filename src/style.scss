@@ -1,7 +1,6 @@
 @import "./scss/config";
-@import "./scss/responsive";
-@import "./scss/work";
 @import "./scss/about";
+@import "./scss/work";
 @import "./scss/entertainment";
 @import "./scss/progressbar";
 @import "./scss/navbar";
@@ -11,6 +10,7 @@
 @import "./scss/secondsection";
 @import "./scss/contact";
 @import "./scss/footer";
+@import "./scss/responsive";
 
 html {
   scroll-behavior: smooth;
