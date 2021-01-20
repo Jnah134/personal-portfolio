@@ -161,6 +161,14 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .illustration-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .work {
   background: url("/src/images/background-2.jpg") no-repeat center/cover;
 }
