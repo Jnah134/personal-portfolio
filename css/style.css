@@ -1,5 +1,116 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap");
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .title-grid {
+    padding: 0 1rem;
+  }
+  .title-grid div {
+    width: 100%;
+    grid-column: 1/-1;
+  }
+  .title-grid h5 {
+    font-size: 1.2rem;
+  }
+  .title-grid .main-title {
+    font-size: 2.3rem;
+  }
+  .title-grid .small-subtitle {
+    font-size: 1.2rem;
+  }
+  .title-grid .main-subtitle-container {
+    margin-top: 1.5rem;
+    padding-right: 2rem;
+  }
+  .title-grid .main-subtitle-container p {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+  .first-section {
+    padding: 2rem 1.5rem;
+  }
+  .first-section .information-container .title-section {
+    font-size: 2rem;
+  }
+  .first-section .information-container p {
+    font-size: 1rem;
+  }
+  .first-section .information-container .experience-client-container .text {
+    font-size: 0.6rem;
+    margin-top: 1.6rem;
+  }
+  .first-section .information-container .experience-client-container .number-clr {
+    font-size: 3rem;
+  }
+  .first-section .link-container {
+    margin-bottom: 2rem;
+  }
+  .second-section {
+    padding: 3rem 1rem;
+  }
+  .second-section .image-container {
+    height: 300px;
+  }
+  .second-section .image-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .second-section .image-container h5 {
+    font-size: 1rem;
+  }
+  .second-section .image-container:nth-child(1) {
+    margin-bottom: 1.5rem;
+  }
+  header .menu_nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .logo {
+    width: 120px;
+    position: fixed;
+  }
+  header .social-media {
+    display: none;
+  }
+  footer {
+    padding: 4rem 0rem;
+  }
+  footer .privacy-container {
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .privacy-container .email-contact {
+    padding-top: 5rem;
+  }
+  footer .last-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .copyright {
+    margin-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
 .work {
   background: url("/src/images/background-2.jpg") no-repeat center/cover;
 }
@@ -372,10 +483,6 @@
   }
   .personal-image {
     margin-top: 3rem;
-  }
-  .test {
-    padding: 0;
-    margin: 0;
   }
   .illustration-container {
     padding: 4rem 1rem;
@@ -1317,117 +1424,6 @@ header .social-media .social-media-icon:hover {
   }
   .second-section .image-container {
     margin: 0 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu-btn {
-    visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .title-grid {
-    padding: 0 1rem;
-  }
-  .title-grid div {
-    width: 100%;
-    grid-column: 1/-1;
-  }
-  .title-grid h5 {
-    font-size: 1.2rem;
-  }
-  .title-grid .main-title {
-    font-size: 2.3rem;
-  }
-  .title-grid .small-subtitle {
-    font-size: 1.2rem;
-  }
-  .title-grid .main-subtitle-container {
-    margin-top: 1.5rem;
-    padding-right: 2rem;
-  }
-  .title-grid .main-subtitle-container p {
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-  .first-section {
-    padding: 2rem 1.5rem;
-  }
-  .first-section .information-container .title-section {
-    font-size: 2rem;
-  }
-  .first-section .information-container p {
-    font-size: 1rem;
-  }
-  .first-section .information-container .experience-client-container .text {
-    font-size: 0.6rem;
-    margin-top: 1.6rem;
-  }
-  .first-section .information-container .experience-client-container .number-clr {
-    font-size: 3rem;
-  }
-  .first-section .link-container {
-    margin-bottom: 2rem;
-  }
-  .second-section {
-    padding: 3rem 1rem;
-  }
-  .second-section .image-container {
-    height: 300px;
-  }
-  .second-section .image-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
-  .second-section .image-container h5 {
-    font-size: 1rem;
-  }
-  .second-section .image-container:nth-child(1) {
-    margin-bottom: 1.5rem;
-  }
-  header .menu_nav {
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header .logo {
-    width: 120px;
-    position: fixed;
-  }
-  header .social-media {
-    display: none;
-  }
-  footer {
-    padding: 4rem 0rem;
-  }
-  footer .privacy-container {
-    justify-items: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer .privacy-container .email-contact {
-    padding-top: 5rem;
-  }
-  footer .last-footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .copyright {
-    margin-top: 0;
-    padding-bottom: 2rem;
   }
 }
 
