@@ -93,7 +93,7 @@
       <h3 class="line-title">Tell me about your project</h3>
 
       <!-- form section -->
-      <form id="form">
+      <form id="form" method="POST" data-netlify="true">
         <div class="flex">
           <div class="column-direction">
             <div class="label-container">
@@ -171,10 +171,17 @@
             </p>
           </div>
         </div>
+         <div class="recaptcha-container">
+          <div data-netlify-recaptcha="true"></div>
+        </div>
+      </div>
         <div class="link-container center-btn">
-          <a href="#" class="btn btn--border btn--primary btn--animated"
-            >Send <i class="fas fa-arrow-right"></i
-          ></a>
+          <button
+            type="submit"
+            class="btn btn--border btn--primary btn--animated"
+          >
+            Send <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
         <!-- end of privacy & policy -->
       </form>

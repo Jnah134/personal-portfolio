@@ -32,6 +32,16 @@ a {
   text-decoration: none;
 }
 
+button {
+  border-color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+.recaptcha-container {
+  margin: 1.5rem 0;
+}
+
 .logo {
   width: 150px;
 }
