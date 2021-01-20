@@ -57,6 +57,7 @@ a {
   animation: bounce 2s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
+  @include transition;
 }
 .show-top-link {
   visibility: visible;
