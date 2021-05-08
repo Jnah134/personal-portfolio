@@ -1,5 +1,5 @@
 .contact {
-  background: url("/src/images/background-4.jpg") no-repeat center/cover;
+  background: url('/src/images/background-4.jpg') no-repeat center/cover;
 }
 
 #form {
@@ -54,7 +54,7 @@
         border: 3px solid $primary-clr;
         border-top: none;
         border-right: none;
-        content: "";
+        content: '';
         height: 6px;
         left: 7px;
         opacity: 0;
@@ -65,16 +65,16 @@
         @include transition;
       }
 
-      & input[type="checkbox"] {
+      & input[type='checkbox'] {
         visibility: hidden;
       }
 
-      & input[type="checkbox"]:checked + label {
+      & input[type='checkbox']:checked + label {
         box-shadow: 0 0 5px $primary-clr-2;
         border-color: $primary-clr;
       }
 
-      & input[type="checkbox"]:checked + label:after {
+      & input[type='checkbox']:checked + label:after {
         opacity: 1;
       }
       // end of checkboxe
